@@ -1,4 +1,4 @@
-```
+
 jQuery
   jQuery 是一个 JavaScript 库,极大地简化了 JavaScript 编程。
   write less do more
@@ -33,9 +33,9 @@ div p 是div包含p
 div>p 父级是div的p
 div+p div和p紧挨着
 div,p 二者并列
-```
 
-```
+
+
 AJAX
 AJAX 是与服务器交换数据的技术，它在不重载全部页面的情况下，实现了对部分网页的更新。
 Asynchronous-异步请求(没有中断浏览器的用户体验)
@@ -60,4 +60,53 @@ HTTP响应状态码
 405请求方式不对
 5xx服务器出问题
 ```
+<!--美女图-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#mm{
+				
+			}
+		</style>
+		
+	</head>
+	<body>
+		<ul id="mm" ></ul>
+		<button id="load">加载</button>
+		
+		<script src="js/jquery.min.js">
+			
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				$("#load").on("click",function(){
+					var url = "http://api.tianapi.com/meinv/?key=ef8ccf28de7c230859aea2e58e8bbc39&num=10"
+
+					$.getJSON(url,function(jsonObj){
+						$("#mm").empty();
+						for(var i =0; i<jsonObj.newslist.length; i +=1){
+							$("#mm").append(
+								$("<li>").append(
+									$("<a target='_blank'>")
+									.text(jsonObj.newslist[i].title)
+									
+									.attr("href",jsonObj.newslist[i].picUrl)
+									
+								));
+							
+						}
+					});
+				});
+			});
+			
+		</script>
+	</body>
+</html>
+
+```
+
+
 
