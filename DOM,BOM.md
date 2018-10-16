@@ -137,8 +137,124 @@ setTimeout() - 在指定的毫秒数后执行指定代码
 clearInterval() 方法用于停止 setInterval() 方法执行的函数代码。
 clearTimeout() 方法用于停止执行setTimeout()方法的函数代码。
 ```
+跑马灯
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			h1 {
+				font-size: 36px;
+				background-color: lightgoldenrodyellow;
+				color: darkolivegreen;
+				width: 960px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="welcome" class="foo">欢迎来到千锋教育成都校区Python就业班▁▂▃▄▅▆▇▆▅▄▃▂▁</h1>
+		<script>
+			var h1= document.querySelectorAll(".foo")[0];
+			// var h1 = document.querySelector(".foo");
+			// var h1 = document.getElementsByClassName("foo")[0];
+			// var h1 = document.getElementsByTagName("h1")[0];
+			// var h1 = document.getElementById("welcome")
+			function move() {
+				var str = h1.textContent;
+				str = str.substring(1) + str.charAt(0);
+				h1.textContent = str;
+			}
+			window.setInterval(move, 200);
+		</script>
+	</body>
+</html>
 
 
+```
+日历时间
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#time {
+				float: right;
+				background-color: blue;
+				color: yellow;
+				width: 320px;
+				height: 40px;
+				font: 20px/40px Arial;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>H<sub>2</sub>O</h1>
+		<div id="time"></div>
+		<script type="text/javascript">
+			var days = ["日", "一", "二", "三", "四", "五", "六"];
+			
+			function showTime() {
+				var now = new Date();
+				var year = now.getFullYear();
+				var month = now.getMonth() + 1;
+				var date = now.getDate();
+				var hour = now.getHours();
+				var minute = now.getMinutes();
+				var second = now.getSeconds();
+				var day = now.getDay();
+				var div = document.getElementById("time");
+				div.innerHTML = year + "年" 
+					+ (month < 10 ? "0" : "") + month + "月" 
+					+ (date < 10 ? "0" : "") + date + "日&nbsp;&nbsp;"
+					+ (hour < 10 ? "0" : "") + hour + ":"
+					+ (minute < 10 ? "0" : "") + minute + ":" 
+					+ (second < 10 ? "0" : "") + second 
+					+ "&nbsp;&nbsp;星期" + days[day];
+			}
+			showTime();
+			window.setInterval(showTime, 1000);
+		</script>
+	</body>
+</html>
+
+```
+跳转百度
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2><span id="counter">5</span>秒钟以后自动跳转到百度...</h2>
+		<script type="text/javascript">
+			var countdown = 5;
+			var span = document.getElementById("counter");
+			function delayGo() {
+				countdown -= 1;
+				if (countdown == 0) {
+					// window.location - 浏览器地址栏
+					// window.document - 文档对象
+					// window.history - 历史记录
+					// window.navigator - 浏览器
+					// window.screen - 屏幕
+					location.href = "http://www.baidu.com";
+				} else {
+					span.textContent = countdown;
+					setTimeout(delayGo, 1000);
+				}
+			}
+			setTimeout(delayGo, 1000);
+		</script>
+	</body>
+</html>
 
 
-
+```
