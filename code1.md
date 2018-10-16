@@ -358,40 +358,48 @@
 作业2-大图小图
 
 ```
+<!--点开小图是对应的大图-->
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-			}
-			#container {
-				margin: 10px 20px;
-			}
-			#container li {
-				float: left;
-				list-style: none;
-				width: 60px;
-				height: 60px;
+		<style type="text/css">
+			#a1{
+				display: block;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="container">
-			<img src="img/picture-1.jpg" alt="">
-			<ul>
-				<li><img src="img/thumb-1.jpg" alt=""></li>
-				<li><img src="img/thumb-2.jpg" alt=""></li>
-				<li><img src="img/thumb-3.jpg" alt=""></li>
-			</ul>
-		</div>
-		<script src="js/mylib.js"></script>
-		<script>
-		
+		<img id="a1" src="img/goodbye.jpg"/>
+		<img  id="i1" src="img/thumb-1.jpg" alt="" />
+		<img  id="i2" src="img/thumb-2.jpg" alt="" />
+		<img  id="i3" src="img/thumb-3.jpg" alt="" />
+				
+		<script src="js/myjs.js">		
 		</script>
+		<script type="text/javascript">
+			var img1 = document.getElementById("i1");
+			var img2 = document.getElementById("i2");
+			var img3 = document.getElementById("i3");
+			var img4 = document.getElementById("a1");
+			bind(img1,"click",function(){
+				img4.src="img/hello.jpg";
+			})
+			bind(img2,"click",function(){
+				img4.src="img/goodbye.jpg";
+			})
+			bind(img3,"click",function(){
+				img4.src="img/oneshit.jpg";
+			})
+					
+		</script>
+		
+		<script src="js/myjs.js">
+			
+		</script>
+		
 	</body>
 </html>
 ```
