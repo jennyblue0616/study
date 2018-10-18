@@ -160,6 +160,10 @@ title: Linux
 
       ```
       -ln
+      
+       ln [参数][源文件或目录][目标文件或目录]
+       给文件创建软链接，为log2013.log文件创建软链接link2013，如果log2013.log丢失，link2013将失效：
+       ln -s log2013.log link2013
       ```
 
       ​
