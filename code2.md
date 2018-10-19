@@ -147,11 +147,13 @@
 				// evt.target.parentNode.style.display = "none";
 				// closeBtn.parentNode.style.visibility = "hidden";
 				var advDiv = closeBtn.parentNode;
+				//currentStyle只能读不能写
 				var currentStyle = advDiv.currentStyle? 
 					advDiv.currentStyle : 
 					document.defaultView.getComputedStyle(advDiv);
 				var width = parseInt(currentStyle.width) + 50;
 				var height = parseInt(currentStyle.height) + 50;
+				//style只能写不能读
 				advDiv.style.width = width + "px";
 				advDiv.style.height = height + "px";
 				// alert(currentStyle.width);
