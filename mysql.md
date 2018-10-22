@@ -361,6 +361,59 @@ revoke all privileges on srs.* from 'abc'@'%';
 
 
 ```
+1.新增数据
+import pymysql
+def main():
+    no = int(input('部门编号: '))
+    name = input('部门名称: ')
+    location = input('部门所在地: ')
+    # 1. 创建数据库连接
+    conn = pymysql.connect(host='localhost', port=3306,
+                           user='root', password='123456',
+                           db='hrs', charset='utf8',
+                           autocommit=True)
+    try:
+        # 2. 获得游标对象
+        with conn.cursor() as cursor:
+            # 3. 向数据库服务器发出SQL
+            result = cursor.execute(
+                query='insert into TbDept values (%s,%s,%s)',
+                args=(no, name, location))
+            if result == 1:
+                print('新增成功!')
+    finally:
+        # 4. 关闭连接释放资源
+        conn.close()
+if __name__ == '__main__':
+    main()
+
+2.更新数据
+import pymysql
+def main():
+    no = int(input('部门编号: '))
+    name = input('部门名称: ')
+    location = input('部门所在地: ')
+    # 1. 创建数据库连接
+    conn = pymysql.connect(host='localhost', port=3306,
+                           user='root', password='123456',
+                           db='hrs', charset='utf8',
+                           autocommit=True)
+    try:
+        # 2. 获得游标对象
+        with conn.cursor() as cursor:
+            # 3. 向数据库服务器发出SQL
+            result = cursor.execute(
+                query='update TbDept set dname=%(name)s, dloc=%(loc)s where dno=%(no)s',
+                args={'no': no, 'name': name, 'loc': location})
+            if result == 1:
+                print('更新成功!')
+    finally:
+        # 4. 关闭连接释放资源
+        conn.close()
+if __name__ == '__main__':
+    main()
+
+3.查看数据
 import pymysql
 
 class Dept():
