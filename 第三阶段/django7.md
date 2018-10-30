@@ -164,7 +164,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 ```
 
-(4)工程目录下的settings.py文件中,
+(4)工程目录下的urls.py文件中,
 
 ```
 from django.contrib.staticfiles.urls import static
