@@ -95,7 +95,6 @@ def show_article(request, id):
     if request.method == 'GET':
         article = Article.objects.get(pk=id)
         return render(request, 'show_articles.html', {'article':article})
-
 ```
 
 4. 在articles.html中
@@ -164,9 +163,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 ```
 
-(4)工程目录下的settings.py文件中,
+(4)工程目录下的urls.py文件中,
 
-```
+```python
 from django.contrib.staticfiles.urls import static
 
 from day06.settings import MEDIA_URL, MEDIA_ROOT
