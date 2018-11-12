@@ -37,7 +37,7 @@ T(模板Template):html
 1.
 pip install virtualenv
 2.
-virtual --no-site-package evn(虚拟环境命名)
+virtualenv --no-site-packages evn(虚拟环境命名)
 参数: --no-site-package 意为纯净的虚拟环境
 参数: -p 是python版本,如果只有一个版本可不写
 3.
