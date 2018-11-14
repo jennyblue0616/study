@@ -251,7 +251,7 @@ def sel():
 
 
 
-![page](..\pictures\page.png)
+![page](../pictures/page.png)
 
 
 
