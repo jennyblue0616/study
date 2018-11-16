@@ -239,6 +239,14 @@ def del_stu_cou(id):
 
 对于前端来说，钩子函数就是指在执行所有函数前，先执行了的函数，此概念（或者说现象）跟AOP（面向切面编程）很像,可以与django中的中间件对比记忆.
 
+
+
+ 在Web开发中经常会对所有的请求做一些相同的操作，如果将相同的代码写入每一个视图函数中，那么程序就会变得非常臃肿。为了避免在每个视图函数中定义相同的代码，可以使用钩子函数。如下有三个常见的钩子:
+
+1. before_request: 被装饰的函数会在每个请求被处理之前调用。
+2. after_request: 被装饰的函数会在每个请求退出时才被调用。在程序没有抛出异常的情况下，才会被执行。
+3. teardown_request: 被装饰的函数会在每个请求退出时才被调用。不论程序是否抛出异常，都会执行。
+
 ```python
 @blue.before_request
 def before_request():
@@ -270,6 +278,8 @@ def teardown_request(exception):
 
 before_request是从前往后的顺序进行执行的,after_request是从后往前的顺序执行.teardown_request是无论如何都会执行,但是如果有错误,只有before_request会执行,after_request不会执行
 
+  各函数的执行顺序为，被before_request装饰的函数会在请求处理之前被调用。而after_request和teardown_request会在请求处理完后才被调用。区别就在于after_request只会在请求正常退出的情况下才会被调用，并且atfer_request函数必须接受一个响应对象，并返回一个响应对象。而teardown_request函数在任何情况下都会被调用，并且必须传入一个参数来接收异常对象。
+
 ### g
 
 g是应用上下文,可以在before_request设置一个g.cursor = cursor
@@ -278,6 +288,8 @@ g是应用上下文,可以在before_request设置一个g.cursor = cursor
 ​	g.cursor.execute(sql)拿到
 
 g是当前请求的全局变量
+
+ 应用全局对象（g）是Flask为每一个请求自动建立的一个对象。g的作用范围只是在一个请求（也就是一个线程）里，它不能在多个请求中共享数据，故此应用全局变量（g）确保了线程安全。
 
 ```python
 
