@@ -190,6 +190,7 @@ DATABASES = {
     'HOST': '127.0.0.1',
     'PORT': '3306',
     'DB': 'flask6',
+    'DIALECT': 'mysql',
     'DRIVER': 'pymysql'
 }
 ```
