@@ -48,9 +48,9 @@ def up_img():
         upload_img.save(path)
 
         # 3.保存图片到数据库中
-        up_img = UploadImg()
+        up_img = UploadImg()(模型名)
         upload_path = upload_img.filename
-        up_img.img = upload_path
+        up_img.img(字段) = upload_path
         db.session.add(up_img)
         db.session.commit()
         return render_template('img.html', up_img=up_img)
