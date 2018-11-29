@@ -376,7 +376,7 @@ def register():
             #验证用户是否注册,验证密码和确认密码是否一致
             user = User()
             user.username = form.username.data
-            user.password = generate_password_hash(form.username.data)
+            user.password = generate_password_hash(form.password.data)
             db.session.add(user)
             db.session.commit()
             return '注册成功'
