@@ -72,7 +72,7 @@ class Student(models.Model):
 
    ​
 
-3. 在terminal命令行中输入`python manage.py makemigration `生成迁移文件,migrations文件夹下回生成0001_initial.py文件
+3. 在terminal命令行中输入`python manage.py makemigrations `生成迁移文件,migrations文件夹下回生成0001_initial.py文件
 
 4. 在terminal里输入 `python manage.py migrate`迁移到数据库,数据库里就会生成student的表.
 
