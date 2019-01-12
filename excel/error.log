@@ -1,0 +1,207 @@
+2019-01-11 17:09:07 ERROR [3172-Thread-2] log.log_response line 228: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\backend\views.py", line 19, in home
+    return render(request, 'index.html', {})
+  File "D:\env\env\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2019-01-11 17:09:07 ERROR [3172-Thread-2] basehttp.log_message line 154: "GET / HTTP/1.1" 500 81762
+2019-01-11 17:09:12 ERROR [3172-Thread-4] log.log_response line 228: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\backend\views.py", line 19, in home
+    return render(request, 'index.html', {})
+  File "D:\env\env\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2019-01-11 17:09:12 ERROR [3172-Thread-4] basehttp.log_message line 154: "GET / HTTP/1.1" 500 81897
+2019-01-11 17:12:35 ERROR [5040-Thread-2] log.log_response line 228: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\backend\views.py", line 19, in home
+    return render(request, 'index.html', {})
+  File "D:\env\env\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2019-01-11 17:12:35 ERROR [5040-Thread-2] basehttp.log_message line 154: "GET / HTTP/1.1" 500 81897
+2019-01-11 17:12:39 ERROR [5040-Thread-4] log.log_response line 228: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\backend\views.py", line 19, in home
+    return render(request, 'index.html', {})
+  File "D:\env\env\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2019-01-11 17:12:39 ERROR [5040-Thread-4] basehttp.log_message line 154: "GET / HTTP/1.1" 500 81897
+2019-01-11 17:13:01 WARNING [5040-Thread-6] log.log_response line 228: Not Found: /backend/index
+2019-01-11 17:13:01 WARNING [5040-Thread-6] basehttp.log_message line 154: "GET /backend/index HTTP/1.1" 404 2434
+2019-01-11 17:14:10 WARNING [5040-Thread-8] log.log_response line 228: Not Found: /index
+2019-01-11 17:14:10 WARNING [5040-Thread-8] basehttp.log_message line 154: "GET /index HTTP/1.1" 404 2177
+2019-01-11 17:14:13 ERROR [5040-Thread-8] log.log_response line 228: Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\backend\views.py", line 19, in home
+    return render(request, 'index.html', {})
+  File "D:\env\env\lib\site-packages\django\shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\env\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2019-01-11 17:14:13 ERROR [5040-Thread-8] basehttp.log_message line 154: "GET / HTTP/1.1" 500 81762
+2019-01-11 19:10:20 ERROR [6108-Thread-2] log.log_response line 228: Internal Server Error: /backend/data/
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\db\backends\utils.py", line 83, in _execute
+    return self.cursor.execute(sql)
+  File "D:\env\env\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\env\env\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\env\env\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "D:\env\env\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\env\env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1065, 'Query was empty')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\backend\views.py", line 23, in agent_bar_data
+    cursor.execute('')
+  File "D:\env\env\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "D:\env\env\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\env\env\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\env\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\env\env\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\env\env\lib\site-packages\django\db\backends\utils.py", line 83, in _execute
+    return self.cursor.execute(sql)
+  File "D:\env\env\lib\site-packages\django\db\backends\mysql\base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "D:\env\env\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\env\env\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "D:\env\env\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "D:\env\env\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\env\env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1065, 'Query was empty')
+2019-01-11 19:10:20 ERROR [6108-Thread-2] basehttp.log_message line 154: "GET /backend/data/ HTTP/1.1" 500 167109
+2019-01-11 19:22:40 WARNING [4364-Thread-4] log.log_response line 228: Not Found: /backend/index/
+2019-01-11 19:22:40 WARNING [4364-Thread-4] basehttp.log_message line 154: "GET /backend/index/ HTTP/1.1" 404 2597
+2019-01-11 20:27:10 ERROR [3836-Thread-2] log.log_response line 228: Internal Server Error: /captcha/
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\common\views.py", line 12, in captcha
+    code_bytes = Captcha.instance().generate(code_text)
+  File "D:\wordspace\gittest1\fangtx\common\captcha.py", line 162, in generate
+    drawings=['warp', 'rotate', 'offset'])
+  File "D:\wordspace\gittest1\fangtx\common\captcha.py", line 94, in text
+    for name in fonts
+  File "D:\wordspace\gittest1\fangtx\common\captcha.py", line 95, in <listcomp>
+    for size in font_sizes or (65, 70, 75)])
+  File "D:\env\env\lib\site-packages\PIL\ImageFont.py", line 280, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "D:\env\env\lib\site-packages\PIL\ImageFont.py", line 145, in __init__
+    layout_engine=layout_engine)
+OSError: cannot open resource
+2019-01-11 20:27:10 ERROR [3836-Thread-2] basehttp.log_message line 154: "GET /captcha/ HTTP/1.1" 500 96833
+2019-01-11 20:36:05 ERROR [7404-Thread-2] log.log_response line 228: Internal Server Error: /captcha/
+Traceback (most recent call last):
+  File "D:\env\env\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "D:\env\env\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\wordspace\gittest1\fangtx\common\views.py", line 13, in captcha
+    code_bytes = Captcha.instance().generate(code_text)
+  File "D:\wordspace\gittest1\fangtx\common\captcha.py", line 162, in generate
+    drawings=['warp', 'rotate', 'offset'])
+  File "D:\wordspace\gittest1\fangtx\common\captcha.py", line 94, in text
+    for name in fonts
+  File "D:\wordspace\gittest1\fangtx\common\captcha.py", line 95, in <listcomp>
+    for size in font_sizes or (65, 70, 75)])
+  File "D:\env\env\lib\site-packages\PIL\ImageFont.py", line 280, in truetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "D:\env\env\lib\site-packages\PIL\ImageFont.py", line 145, in __init__
+    layout_engine=layout_engine)
+OSError: cannot open resource
+2019-01-11 20:36:05 ERROR [7404-Thread-2] basehttp.log_message line 154: "GET /captcha/ HTTP/1.1" 500 96893
