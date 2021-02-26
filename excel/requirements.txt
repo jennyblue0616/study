@@ -1,4 +1,4 @@
-aiohttp==3.5.2
+aiohttp==3.7.4
 alabaster==0.7.11
 amqp==2.3.2
 anaconda-client==1.7.2
